@@ -1,0 +1,11 @@
+---
+- hosts: mainnet
+  gather_facts: no
+  tasks:
+    - name: test get_node_info
+      script: ../../scripts/show_node_info.sh 14265
+      register: result
+
+    - name: print node information
+      debug:
+        var: result.stdout

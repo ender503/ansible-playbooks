@@ -17,6 +17,15 @@ node0.puyuma.org ansible_user=ubuntu
 node10.puyuma.org ansible_user=ubuntu
 deviceproof ansible_user=ubuntu
 
+[mainnet]
+node10.puyuma.org ansible_user=ubuntu
+deviceproof ansible_user=ubuntu
+
+[testnet]
+node0.puyuma.org ansible_user=ubuntu
+node10.puyuma.org ansible_user=ubuntu
+deviceproof ansible_user=ubuntu
+
 [swarm-nodes]
 node2.puyuma.org ansible_user=ubuntu
 node3.puyuma.org ansible_user=ubuntu

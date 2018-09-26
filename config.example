@@ -1,0 +1,44 @@
+Host node0.puyuma.org
+	HostName node0.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node1.puyuma.org
+	HostName node1.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node2.puyuma.org
+	HostName node2.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node3.puyuma.org
+	HostName node3.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node4.puyuma.org
+	HostName node4.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node5.puyuma.org
+	HostName node5.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node6.puyuma.org
+	HostName node6.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host node10.puyuma.org
+	HostName node10.puyuma.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa
+
+Host deviceproof
+	HostName node.deviceproof.org
+	User ubuntu
+	IdentityFile /home/user/.ssh/id_rsa

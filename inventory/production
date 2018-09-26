@@ -1,0 +1,25 @@
+[servers]
+node0.puyuma.org ansible_user=ubuntu
+node2.puyuma.org ansible_user=ubuntu
+node3.puyuma.org ansible_user=ubuntu
+node4.puyuma.org ansible_user=ubuntu
+node5.puyuma.org ansible_user=ubuntu
+node6.puyuma.org ansible_user=ubuntu
+node10.puyuma.org ansible_user=ubuntu
+deviceproof ansible_user=ubuntu
+
+[monitor-nodes]
+node0.puyuma.org ansible_user=ubuntu
+deviceproof ansible_user=ubuntu
+
+[full-nodes]
+node0.puyuma.org ansible_user=ubuntu
+node10.puyuma.org ansible_user=ubuntu
+deviceproof ansible_user=ubuntu
+
+[swarm-nodes]
+node2.puyuma.org ansible_user=ubuntu
+node3.puyuma.org ansible_user=ubuntu
+node4.puyuma.org ansible_user=ubuntu
+node5.puyuma.org ansible_user=ubuntu
+node6.puyuma.org ansible_user=ubuntu

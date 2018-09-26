@@ -1,0 +1,4 @@
+*.retry
+
+# Development
+/inventory/development

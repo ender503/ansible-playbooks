@@ -1,0 +1,18 @@
+---
+- hosts: monitor-nodes
+  tasks:
+    - name: synchronize prometheus
+      synchronize:
+        src: ../workspace/prometheus
+        dest: ~/ansible_workspace/
+
+    - name: stop prometheus
+      shell: sh stop.sh
+      args:
+        chdir: ~/ansible_workspace/prometheus
+      ignore_errors: true
+
+    - name: start prometheus
+      shell: sh start.sh
+      args:
+        chdir: ~/ansible_workspace/prometheus

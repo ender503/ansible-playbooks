@@ -11,3 +11,17 @@
 ```bash
  $ ansible-playbook -i inventory/production playbooks/servers/pings.yml
 ```
+
+## Deploy Prometheus to monitor nodes
+
+1. Clone the Prometheus into work
+
+```
+ $ git clone git@github.com:ender503/prometheus.git workspace/prometheus --branch develop
+```
+
+2. Run the deployment playbook
+
+```
+ $ ansible-playbook -i inventory/production playbooks/monitor-nodes/pings.yml
+```

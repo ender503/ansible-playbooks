@@ -1,0 +1,11 @@
+---
+- hosts: full-nodes
+  gather_facts: no
+  tasks:
+    - name: test ZMQ port
+      shell: lsof -Pni:5556 > /dev/null && echo "enable" || echo "disable"
+      register: result
+
+    - name: print result
+      debug:
+        msg: "ZMQ is {{ result.stdout_lines[0] }}"

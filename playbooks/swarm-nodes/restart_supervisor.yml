@@ -1,0 +1,32 @@
+---
+- hosts: swarm-nodes
+  gather_facts: no
+  tasks:
+    - name: check supervisor folder
+      shell: ls ~/supervisor >> /dev/null && echo 1 || echo 0
+      args:
+        chdir: ~/supervisor
+      register: is_folder_exist
+
+    - fail: msg="supervisor folder is not exist"
+      when: is_folder_exist.stdout == "0"
+
+    - name: check supervisor running
+      shell: supervisorctl status | grep "no such file" >> /dev/null && echo 0 || echo 1
+      args:
+        chdir: ~/supervisor
+      register: is_running
+
+    - name: stop supervisord
+      command: pkill -f supervisord
+      when: is_running.stdout == "1"
+
+    - name: start supervisord
+      shell: supervisord
+      args:
+        chdir: ~/supervisor
+      register: result
+
+    - name: print result
+      debug:
+        var: result
